@@ -1,17 +1,16 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Current File (venv)",
+            "name": "Run tests.test_file_parser_engine",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
-            // "python": "${workspaceFolder}/venv/bin/python",  // For macOS/Linux
-            "python": "${workspaceFolder}\\venv\\Scripts\\python.exe",  // For Windows
-            "console": "integratedTerminal"
+            "program": "${workspaceFolder}/file_parser_service/tests/test_file_parser_engine.py",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/file_parser_service",  // Make sure this is correct
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/file_parser_service"  // Add this line
+            }
         }
     ]
 }
